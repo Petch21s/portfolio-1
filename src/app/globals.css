@@ -31,3 +31,11 @@ body {
     text-wrap: balance;
   }
 }
+
+.text-gradient-purple-pink {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #8B5CF6, #EC4899);
+}
+
