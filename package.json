@@ -16,6 +16,8 @@
     "react-modal": "^3.16.1",
     "react-type-animation": "^3.2.0"
   },
+  "homepage": "https://rudolphredns.github.io/portfolio",
+
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
