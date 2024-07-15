@@ -4,60 +4,50 @@ import ProjectCard from './ProjectCard';
 const ProjectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Description 1",
-    image: "/images/p1.png",
+    title: "Petchy Bank (Python)",
+    description: "Pecthy Bank is a program designed to allow users to manage their personal finances conveniently and securely. It has main functions such as login registration, deposit and withdrawal transactions, as well as detailed balance checking and transaction history.",
+    image: "/report/petchybank1.png",
     tag: ["All", "Web"]
   },
   {
     id: 2,
-    title: "React Portfolio Website",
-    description: "Description 2",
-    image: "/images/p2.png",
+    title: "Petchy Bank (GUI)",
+    description: "Pecthy Bank is a program designed to allow users to manage their personal finances conveniently and securely. It has main functions such as login registration, deposit and withdrawal transactions, as well as detailed balance checking and transaction history.",
+    image: "/report/petchybank.png",
     tag: ["All", "Web"]
   },
   {
     id: 3,
-    title: "React Portfolio Website",
-    description: "Description 3",
-    image: "/images/p3.png",
+    title: "Petchy Hotel",
+    description: "Petchy Hotel is a program that helps manage hotel rooms. The program will check the customer's date of birth. and check age If the customer is under 18 years of age, they will not be able to make a reservation. and must be 18 years of age or older in order to reserve a room in multiple rates as desired by the customer.",
+    image: "/report/petchybank.png",
     tag: ["All", "Web"]
   },
   {
     id: 4,
-    title: "React Portfolio Website",
-    description: "Description 4",
-    image: "/images/p4.png",
+    title: "Dream My Libary",
+    description: "The Dream My Libary program is a program that helps manage book borrowing in the library. This program checks member information and the member's book borrowing history. You can check the status of the book whether it is ready to lend or not. They can also set the borrowing period and manage the return of books efficiently. So that members can borrow books easily and quickly.",
+
+    image: "/report/DreamyLibary.png",
     tag: ["All", "Web"]
   },
   {
     id: 5,
-    title: "React Portfolio Website",
-    description: "Description 5",
-    image: "/images/p5.png",
+    title: "Koala Food Delivery",
+    description: "Koala Food Delivery program is a program that helps users order healthy food easily and conveniently. This program offers a variety of healthy food menus to choose from. With clear nutritional information Users can choose the menu according to their own needs and health restrictions. You can also track your food order history. and receive advice on choosing the right foods for maintaining health and losing weight.",
+
+    image: "/report/koala.png",
     tag: ["All", "Web"]
   },
   {
     id: 6,
-    title: "React Portfolio Website",
-    description: "Description 5",
-    image: "/images/p5.png",
+    title: "Shiba dog farm (UX/UI)",
+    description: "Shiba dog farm is a program UX/UI design by figma that allows you to manage a dog farm that sells puppies of various breeds and ages. along with selling animal food The program can store and track information about each dog on the farm, such as name, age, breed, and health information. Including vaccinations and annual health examinations. It can also track mating. Birth of puppies, selling of dogs and efficient management of pet food stocks. In order to provide systematic and complete care and management of the farm.",
+
+    image: "/report/shiba.png",
     tag: ["All", "Web"]
   },
-  {
-    id: 7,
-    title: "React Portfolio Website",
-    description: "Description 5",
-    image: "/images/p5.png",
-    tag: ["All", "Web"]
-  },
-  {
-    id: 8,
-    title: "React Portfolio Website",
-    description: "Description 5",
-    image: "/images/p5.png",
-    tag: ["All", "Web"]
-  }
+  
 ];
 
 const ProjectSection = () => {
