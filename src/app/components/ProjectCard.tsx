@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import Image from 'next/image';
 
 interface ProjectCardProps {
   imgUrl: string;
@@ -20,24 +19,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description })
     setIsModalOpen(false);
   };
 
-  // Truncate the description to a maximum of 36 characters
+  // Truncate the description to a maximum of 15 characters
   const truncatedDescription =
-    description.length > 36 ? `${description.slice(0, 36)}...` : description;
+    description.length > 36 ? `${description.slice(0, 38)}...` : description;
 
   return (
     <>
       <div
         onClick={openModal}
-        className="cursor-pointer mb-8 bg-[#1f1f1f] rounded-3xl shadow-2xl overflow-hidden transform transition-all hover:scale-105 duration-700 hover:shadow-lg relative block md:w-1/2"
+        className="cursor-pointer mb-8 bg-[#1f1f1f] rounded-3xl shadow-2xl overflow-hidden transform transition-all hover:scale-105 duration-700 hover:shadow-lg relative block md:w-[1/2]"
       >
-        <div className="relative h-[150px] rounded-t-3xl">
-          <Image
-            src={imgUrl}
-            alt={title}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-t-3xl"
-          />
+        <div
+          className="h-[150px] bg-cover bg-center relative rounded-t-3xl"
+          style={{ backgroundImage: `url(${imgUrl})` }}
+        >
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-75 flex items-center justify-center transition-opacity duration-500 hover:opacity-100 rounded-t-3xl">
             <div className="flex space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               {/* Add any icons or content here */}
@@ -73,14 +68,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description })
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          <Image
-            src={imgUrl}
-            alt={title}
-            layout="responsive"
-            width={700}
-            height={400}
-            className="w-full rounded-lg mb-4 shadow-md"
-          />
+          <img src={imgUrl} alt={title} className="w-full rounded-lg mb-4 shadow-md" />
           <h2 className="text-3xl font-bold mb-4">{title}</h2>
           <p className="text-gray-800 text-lg mb-6">{description}</p>
           <div className="flex justify-between items-center">
