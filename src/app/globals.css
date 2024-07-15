@@ -32,10 +32,19 @@ body {
   }
 }
 
-.text-gradient-purple-pink {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(90deg, #8B5CF6, #EC4899);
+
+@keyframes spin-skill {
+  from {
+    transform: rotate(0deg);
+    clip-path: circle(0%);
+  }
+  to {
+    transform: rotate(360deg);
+    clip-path: circle(50%);
+  }
+}
+
+.group-hover\:animate-spin-skill:hover {
+  animation: spin-skill 2s linear forwards;
 }
 

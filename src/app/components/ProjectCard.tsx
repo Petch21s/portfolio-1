@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description })
               </div>
             </div>
           </div>
-          <div className="p-4 md:p-6 relative z-10 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-b-3xl shadow-lg">
+          <div className="p-4 md:p-6 relative z-10 bg-gradient-to-r from-purple-500  to-red-500 rounded-b-3xl shadow-lg">
             <h3 className="text-white text-xl md:text-2xl font-semibold mb-2">{title}</h3>
             <p className="text-gray-200 text-sm">{description}</p>
           </div>

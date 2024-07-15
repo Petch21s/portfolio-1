@@ -58,7 +58,7 @@ const Herosection = () => {
             <Image
               src="/images/heroimage.png"
               alt="Description of the image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 hover:scale-110 transition-transform "
               width={300}
               height={300}
             />
