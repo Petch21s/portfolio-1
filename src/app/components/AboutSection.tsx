@@ -11,7 +11,7 @@ const AboutSection = () => {
 
       <div className="flex justify-between">
         <div className="w-[500px] h-[500px] rounded-full bg-transparent relative overflow-hidden">
-          <img
+          <Image
             src="/images/heroimage1.png"
             alt="Description of the image"
             className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 hover:scale-110 transition-transform duration-500"
@@ -51,7 +51,6 @@ const AboutSection = () => {
             <p className="text-white mt-2">GPA: 3.24</p>
           </div>
         </div>
-
       </div>
     </div>
   );
