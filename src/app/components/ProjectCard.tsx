@@ -46,7 +46,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description })
     <>
       <div 
         onClick={openModal}
-        className="cursor-pointer mb-8 bg-transparent h-[260px] w-[340px] sm:h-[250px] sm:w-[300px] md:h-[260px] md:w-[340px] rounded-3xl overflow-hidden transform transition-all hover:scale-105 duration-700 relative block md:w-[1/2]"
+        className="cursor-pointer mb-8 bg-transparent h-[260px] w-[340px] sm:h-[250px] sm:w-[300px] md:h-[260px] md:w-[340px] rounded-3xl overflow-hidden transform transition-all hover:scale-105 duration-700 relative block "
       >
         <div
           className="h-[150px] bg-cover bg-center relative rounded-t-3xl"
