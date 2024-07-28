@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Experience = () => {
   return (
-    <div className='w-auto h-[600px] mt-[150px] bg-opacity-70'>
+    <div className='w-auto h-[600px] mt-[150px] bg-opacity-70 '>
       <h1 className='text-white text-4xl font-bold text-center'>
         Experience
       </h1>
