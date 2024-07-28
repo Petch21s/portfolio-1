@@ -1,6 +1,7 @@
-"use client"
-import React, { useState } from 'react';
-import Modal from 'react-modal';
+"use client";
+import React, { useState, useEffect } from "react";
+import Modal from "react-modal";
+import { useMediaQuery } from 'react-responsive';
 
 interface ProjectCardProps {
   imgUrl: string;
@@ -10,6 +11,28 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 640px)' });
+  const isMedium = useMediaQuery({ query: '(max-width: 768px)' });
+  const islg = useMediaQuery({ query: '(max-width: 1024px)' });
+  const [truncatedDescription, setTruncatedDescription] = useState(description);
+
+  useEffect(() => {
+    const truncateDescription = () => {
+      if (isSmallScreen) {
+        setTruncatedDescription(description.length > 20 ? `${description.slice(0, 36)}...` : description);
+      } 
+      else if (isMedium){
+        setTruncatedDescription(description.length > 20 ? `${description.slice(0, 30)}...` : description);
+      }
+      else if (islg){
+        setTruncatedDescription(description.length > 20 ? `${description.slice(0, 36)}...` : description);
+      }
+      else {
+        setTruncatedDescription(description.length > 36 ? `${description.slice(0, 36 )}...` : description);
+      }
+    };
+    truncateDescription();
+  }, [description, isSmallScreen]);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -19,15 +42,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description })
     setIsModalOpen(false);
   };
 
-  // Truncate the description to a maximum of 15 characters
-  const truncatedDescription =
-    description.length > 36 ? `${description.slice(0, 38)}...` : description;
-
   return (
     <>
-      <div
+      <div 
         onClick={openModal}
-        className="cursor-pointer mb-8 bg-[#1f1f1f] rounded-3xl shadow-2xl overflow-hidden transform transition-all hover:scale-105 duration-700 hover:shadow-lg relative block md:w-[1/2]"
+        className="cursor-pointer mb-8 bg-transparent h-[260px] w-[340px] sm:h-[250px] sm:w-[300px] md:h-[260px] md:w-[340px] rounded-3xl overflow-hidden transform transition-all hover:scale-105 duration-700 relative block md:w-[1/2]"
       >
         <div
           className="h-[150px] bg-cover bg-center relative rounded-t-3xl"
@@ -35,7 +54,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description })
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-75 flex items-center justify-center transition-opacity duration-500 hover:opacity-100 rounded-t-3xl">
             <div className="flex space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              {/* Add any icons or content here */}
             </div>
           </div>
         </div>
@@ -43,7 +61,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description })
           <h3 className="text-white text-xl md:text-2xl font-semibold mb-2">{title}</h3>
           <p className="text-gray-200 text-sm">{truncatedDescription}</p>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-50 transition-opacity duration-500 rounded-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r h-[200px] w-[340px] from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-50 transition-opacity duration-500 rounded-3xl"></div>
       </div>
 
       <Modal
@@ -56,7 +74,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description })
         <div className="bg-white rounded-lg shadow-lg max-w-3xl mx-auto p-6 relative">
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition duration-300"
+            className="absolute top-1 right-2 text-gray-500 hover:text-gray-800 transition duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

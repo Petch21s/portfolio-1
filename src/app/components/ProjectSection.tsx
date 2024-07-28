@@ -47,6 +47,7 @@ const ProjectsData = [
     image: "/report/shiba.png",
     tag: ["All", "Web"]
   },
+ 
   
 ];
 
@@ -54,7 +55,15 @@ const ProjectSection = () => {
   return (
     <div id='projects' className="mt-[170px]">
       <h2 className="text-4xl font-bold text-white mb-6 text-center">My Projects</h2>
-      <div className="grid grid-cols-2 mt-[100px]  px-[250px] md:grid-cols-4 gap-3 justify-items-center">
+      <div className=" grid grid-cols-1 mt-[100px] 
+      
+            sm:grid-cols-2 sm:px-[0px]
+            md:grid-cols-2 md:px-[0px]
+            lg:grid-cols-3  lg:px-[0px]
+            xl:grid-cols-3  xl:px-[0px]
+            2xl:grid-cols-4  2xl:px-[50px]
+            justify-items-center">
+        
         {ProjectsData.map((project) => (
           <ProjectCard
             key={project.id}
